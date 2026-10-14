@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1877F2">
+    <title>Kingdom Discipleship App</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-screen="home">
+
+<!-- SPLASH SCREEN -->
+<div id="splash-screen" class="splash">
+    <span class="splash-globe" data-icon="globe" data-size="400"></span>
+
+    <div class="splash-fall">
+        <div class="falling-text fall-1">Go Ye Therefore</div>
+        <div class="falling-text fall-2">Preach the Word</div>
+        <div class="falling-text fall-3">Heal the Sick</div>
+    </div>
+
+    <div class="splash-content">
+        <div class="splash-photo">
+            <div class="splash-photo-inner"><span data-icon="user" data-size="96"></span></div>
+            <div class="splash-photo-ping"></div>
+        </div>
+
+        <h2 class="splash-title">The Great Commission</h2>
+        <p class="splash-quote">"To seek and to save that which was lost."</p>
+
+        <div class="splash-ring">
+            <svg viewBox="0 0 128 128">
+                <circle cx="64" cy="64" r="56" stroke="white" stroke-width="6" fill="transparent" opacity="0.2"></circle>
+                <circle id="splash-circle" class="splash-circle" cx="64" cy="64" r="56" stroke="#FBBF24" stroke-width="6" fill="transparent" stroke-dasharray="351" stroke-dashoffset="0"></circle>
+            </svg>
+            <span id="splash-timer" class="splash-timer">9</span>
+        </div>
+
+        <p class="splash-init">Initializing Kingdom App...</p>
+    </div>
+</div>
+
+<!-- APP FRAME -->
+<div id="app-frame">
+
+    <!-- HEADER -->
+    <header class="dv-header">
+        <button id="btn-left" class="hdr-btn ripple" aria-label="Menu"><span id="btn-left-icon" data-icon="menu" data-size="28"></span></button>
+        <h1 id="hdr-title" class="hdr-title">Kingdom App</h1>
+        <button id="btn-right" class="hdr-btn ripple" aria-label="Options"><span data-icon="more_vert" data-size="28"></span></button>
+    </header>
+
+    <!-- ANALYTICS SLOT (filled by analytics.js) -->
+    <div id="analytics-slot"></div>
+
+    <!-- SIDEBARS -->
+    <div id="sidebar-overlay" class="dv-overlay hidden"></div>
+
+    <div id="left-sidebar" class="dv-sidebar dv-sidebar-left">
+        <div class="side-head">
+            <div class="side-avatar"><span data-icon="user" data-size="40"></span></div>
+            <h3 class="side-name">Kingdom Disciple</h3>
+            <p class="side-sub">Sent to Win Souls</p>
+        </div>
+        <nav id="left-menu" class="side-nav"></nav>
+        <div class="side-foot">Kingdom Discipleship v2.0</div>
+    </div>
+
+    <div id="right-sidebar" class="dv-sidebar dv-sidebar-right">
+        <div class="side-head">
+            <h3 class="side-name">Kingdom App</h3>
+            <p class="side-sub">Options</p>
+        </div>
+        <nav id="right-menu" class="side-nav"></nav>
+    </div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="dv-main" class="dv-main">
+
+        <!-- HOME SCREEN -->
+        <div id="screen-home" class="page-screen active hide-scrollbar">
+            <div class="screen-body">
+                <div class="hero-card grad-blue">
+                    <h2 class="hero-title">Welcome, Disciple</h2>
+                    <p class="hero-text">You are part of a global movement to win 6,000,000 souls. Every action counts for eternity.</p>
+                </div>
+
+                <div id="home-quick" class="quick-grid"></div>
+                <div id="home-cards"></div>
+            </div>
+        </div>
+
+        <div id="home-footer" class="home-footer"></div>
+    </main>
+</div>
+
+<!-- SPINNER (screen center) -->
+<div id="dv-loader" class="dv-loader hidden">
+    <div class="dv-spin-card"><div class="dv-spinner"></div></div>
+</div>
+
+<!-- TOAST (screen center) -->
+<div id="dv-toast" class="dv-toast"></div>
+
+<!-- CORE -->
+<script src="app.js"></script>
+
+<!-- MODULES (each file is independent and can be deleted) -->
+<script src="GAS.js"></script>
+<script src="analytics.js"></script>
+<script src="contact-bar.js"></script>
+<script src="live-broadcast.js"></script>
+<script src="library.js"></script>
+<script src="prayer-wall.js"></script>
+<script src="testimony.js"></script>
+<script src="daily-word.js"></script>
+<script src="global-mission.js"></script>
+<script src="mission.js"></script>
+<script src="partner.js"></script>
+<script src="assignment.js"></script>
+<script src="how-to.js"></script>
+<script src="share.js"></script>
+<script src="about-developer.js"></script>
+<script src="announcement.js"></script>
+
+</body>
+</html>
