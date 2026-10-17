@@ -16,11 +16,11 @@
             '</div>' +
             '<div class="dlg-item" style="margin-bottom:16px">' +
                 '<h4 class="dlg-item-title c-blue">1. Share Prayer Requests</h4>' +
-                '<p>Visit the Prayer Wall to submit your requests. Limited to one per device daily.</p>' +
+                '<p>Visit the Prayer Wall to submit your requests. Limited to two per device daily.</p>' +
             '</div>' +
             '<div class="dlg-item" style="margin-bottom:16px">' +
                 '<h4 class="dlg-item-title c-blue">2. Share Testimonies</h4>' +
-                '<p>Share what God has done in your life. One testimony per device per day.</p>' +
+                '<p>Share what God has done in your life. Two testimonies per device per day.</p>' +
             '</div>' +
             '<div class="dlg-item" style="margin-bottom:16px">' +
                 '<h4 class="dlg-item-title c-blue">3. Join Live Broadcast</h4>' +
