@@ -71,6 +71,8 @@
         }
 
         var testimonyData = {
+            cid: DV.uid(),
+            synced: false,
             email: email,
             message: DV.sanitize(message),
             timestamp: new Date().toISOString()
