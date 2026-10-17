@@ -407,3 +407,11 @@ body[data-screen="home"] .dv-fab { bottom: 120px; }
 .splash-timer { font-size: 72px; font-weight: 900; text-shadow: 0 4px 6px rgba(0,0,0,.25); }
 .splash-init { margin-top: 24px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: #bfdbfe; animation: dvPulse 2s cubic-bezier(.4, 0, .6, 1) infinite; }
 @keyframes dvPulse { 50% { opacity: .5; } }
+
+/* ---------- TABLETS (600px and wider) ---------- */
+@media (min-width: 600px) {
+    .screen-body { max-width: 720px; margin: 0 auto; }
+    .quick-grid { grid-template-columns: repeat(4, 1fr); }
+    .dv-dialog, .ann-dialog { max-width: 560px; }
+    .dv-sidebar { width: 320px; }
+}
