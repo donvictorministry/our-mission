@@ -38,9 +38,10 @@
     function track(local, remote, bumpId) {
         DV.ready.then(function () {
             local.timestamp = new Date().toISOString();
+            local.cid = DV.uid();
+            local.synced = false;
             DV.db.transaction(['analytics'], 'readwrite').objectStore('analytics').add(local);
             updateDisplay();
-            if (DV.gas) DV.gas.send('analytics', remote);
             if (bumpId) bump(bumpId);
         });
     }
