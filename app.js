@@ -11,6 +11,7 @@
         DB_NAME: 'KingdomAppDB',
         DB_VERSION: 1,
         MAX_CHARS: 500,
+        DAILY_LIMIT: 2,
         SPLASH_SECONDS: 9,
         SPIN_MIN_MS: 350,
         TOAST_MS: 2500,
@@ -72,6 +73,11 @@
     /* ---------- EVENTS ---------- */
     DV.emit = function (name, detail) {
         document.dispatchEvent(new CustomEvent('dv:' + name, { detail: detail }));
+    };
+
+    DV.uid = function () {
+        if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+        return Date.now().toString(36) + Math.random().toString(36).slice(2, 12);
     };
 
     /* ---------- TOAST + SPINNER (screen center) ---------- */
@@ -205,7 +211,7 @@
                 if (!record || record.date !== today) {
                     store.put({ type: type, date: today, count: 0 });
                     resolve(true);
-                } else if (record.count >= 1) {
+                } else if (record.count >= CFG.DAILY_LIMIT) {
                     resolve(false);
                 } else {
                     resolve(true);
